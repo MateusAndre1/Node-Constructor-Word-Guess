@@ -1,0 +1,27 @@
+{
+  "name": "constructor-word-guess",
+  "version": "1.0.0",
+  "description": "this is a node application i am creating to play a word guess game",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateusAndre1/Node-Constructor-Word-Guess.git"
+  },
+  "keywords": [
+    "inquirer",
+    "prompt"
+  ],
+  "author": "Andre Roque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateusAndre1/Node-Constructor-Word-Guess/issues"
+  },
+  "homepage": "https://github.com/MateusAndre1/Node-Constructor-Word-Guess#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "prompt": "^1.0.0"
+  }
+}
