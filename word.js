@@ -27,7 +27,7 @@ function Word(entireWord) {
             fullWord += this.letterArray[i] + " ";
         }
         
-        console.log(`\n${wordLog} \n========================\n`);
+        console.log(`\n${fullWord} \n========================\n`);
     };
 
     // grab users guessed letter
