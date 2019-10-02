@@ -13,3 +13,7 @@ When the game starts
 ### Option to end
 
 After every round you will be given the option to move on to the next word or exit the game.
+
+## Watch a video demonstrating the game
+
+[Video](https://drive.google.com/file/d/1WALMmQynTCrwSKPX6WiiXvHEnRkxomVs/view)
