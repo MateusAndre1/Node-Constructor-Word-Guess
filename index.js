@@ -4,7 +4,7 @@
 // show many guesses remain
 // display guessed letters in the terminal
 
-var Word = require("./word");
+var Word = require("./word.js");
 var inquirer = require("inquirer");
 
 // give variable to entire alphabet
@@ -71,6 +71,7 @@ function mainLogic() {
 
     // array to put the chosen word
     let chosenWord = [];
+    pickedWord.letterArray.forEach(checkAll);
 
     // use inquirer to get input from user
     if (chosenWord.includes(false)) {
@@ -99,9 +100,51 @@ function mainLogic() {
                     correctArr.push(input.userInput);
                     console.log(`\nAtta boy! You got it one!\n`);
                 }
+
+                pickedWord.log();
+
+                // display how many guesses left and what letters have been guessed
+                console.log(`Guesses left: ${guessesLeft}\nLetters Guessed: ${incorrectArr.join(" ")}\n`);
+
+                if (guessesLeft > 0) {
+                    mainLogic();
+                } else {
+                    console.log(`Sorry you have lost\n`);
+                    restartGame();
+                }
+
+                function checkWord(key) {
+                    checkWordArr.push(key.guessed)
+                }
             }
         });
     } else {
         console.log(`YOU WIN!\n`);
+        restartGame();
+    }
+
+    function checkAll(key) {
+        chosenWord.push(key.guessed);
     }
 }
+
+function restartGame() {
+    inquirer.prompt([{
+        type: "list",
+        message: "Guess another hero!?",
+        choices: ["YES YES AGAIN!", "GET ME OUT IMMA VILLAIN!!"],
+        name: "restart"
+    }]).then(function (input) {
+        if (input.restart === "YES YES AGAIN!") {
+            newWordNeeded = true;
+            incorrectArr = [];
+            correctArr = [];
+            guessesLeft = 10;
+            mainLogic();
+        } else {
+            return;
+        }
+    });
+}
+
+mainLogic();
