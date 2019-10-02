@@ -39,3 +39,25 @@ var randomMCU = Math.floor(Math.random() * mcUniverse.length);
 // give a new variable the value of the random word
 
 var randomWord = mcUniverse[randomMCU];
+
+// add the random word into a new value for Word.js constructor
+
+var pickedWord = new Word(randomWord);
+
+// set if a new word is needed to false if user decides to end the game
+
+var newWordNeeded = false;
+
+// create array to store correct or incorrect letters guessed
+var correctArr = [];
+var incorrectArr = [];
+
+// set a variable for 10 guesses
+
+var guessesLeft = 10;
+
+// create a function for the core logic
+
+function mainLogic() {
+    
+}

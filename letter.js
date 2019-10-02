@@ -19,8 +19,8 @@ function Letter(value) {
         } else if (this.guessed === false) {
             return "_";
         } else {
-            // display the letter if guessed correctly
-            return this.letter;
+            // display the letter if guessed correctly and returns the letter in upper case
+            return this.letter.toUpperCase();
         }
         
     };
