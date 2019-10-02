@@ -1,0 +1,15 @@
+YYYY    YYYY     OOOOOOOOOOOOOOO      UUU         UUU
+ YYY    YYY     OO             OO     UUU         UUU
+  YY    YY      OO             OO     UUU         UUU
+     YYY        OO             OO     UUU         UUU
+     YY         OO             OO     UUU         UUU
+     YY         OO             OO     UUU         UUU
+     YY          OOOOOOOOOOOOOOO       UUUUUUUUUUUUU
+
+
+WWW             WWW      IIIIIIIIIIIII     NNN     NN
+WWW             WWW           II           NNNN    NN
+WWW     WWWW    WWW           II           NN NN   NN
+ WW    WW  WW   WW            II           NN  NN  NN
+ WW   WW    WW  WW            II           NN   NN NN
+ WWWWW       WWWWW       IIIIIIIIIIIII     NN     NNN

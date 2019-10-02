@@ -6,6 +6,7 @@
 
 var Word = require("./word.js");
 var inquirer = require("inquirer");
+var fs = require("fs");
 
 // give variable to entire alphabet
 
@@ -101,6 +102,7 @@ function mainLogic() {
                     console.log(`\nAtta boy! You got it one!\n`);
                 }
 
+                // display in terminal the word with guessed letters correct and remaining underscored
                 pickedWord.log();
 
                 // display how many guesses left and what letters have been guessed
@@ -120,6 +122,7 @@ function mainLogic() {
         });
     } else {
         console.log(`YOU WIN!\n`);
+        winner();
         restartGame();
     }
 
@@ -127,6 +130,8 @@ function mainLogic() {
         chosenWord.push(key.guessed);
     }
 }
+
+// function to restart game
 
 function restartGame() {
     inquirer.prompt([{
@@ -145,6 +150,18 @@ function restartGame() {
             return;
         }
     });
+}
+
+// make a function to display a txt file when user wins
+
+function winner() {
+    fs.readFile("winner.txt", "utf8", function(error, data) {
+
+        if (error) {
+          return console.log(error);
+        }
+        console.log(`\n\n${data}\n\n`);
+      });
 }
 
 mainLogic();
