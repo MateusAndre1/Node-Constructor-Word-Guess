@@ -78,7 +78,7 @@ function mainLogic() {
     if (chosenWord.includes(false)) {
         inquirer.prompt([{
             type: "input",
-            message: "Pick a letter from A to Z",
+            message: "Marvel characters name guess, press any key to start",
             name: "userInput"
         }]).then(function (input) {
             // capture the user input and display corresponding logs
